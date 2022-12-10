@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+
 <div class="column">
     {% for dweet in dweets %}
     <div class="box">
@@ -12,14 +13,14 @@
 </div>
 <div class="column is-one-third">
 <div class="block">
-<a href="{% url 'dwitter:profile_list' %} ">
+<a href="{% url 'profile_list' %} ">
 <button class="button is-dark is-outlined is-fullwidth">
 All Profiles
 </button>
 </a>
 </div>
 <div class="block">
-<a href="{% url 'dwitter:profile' request.user.profile.id %} ">
+<a href="{% url 'profile' request.user.profile.id %} ">
 <button class="button is-success is-light is-outlined is-fullwidth">
 My Profile
 </button>
